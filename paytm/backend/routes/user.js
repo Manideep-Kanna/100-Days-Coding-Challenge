@@ -110,6 +110,12 @@ router.get("/bulk",authMiddleware,async(req,res) =>{
     res.json({
        user: users.map( user => user)
     })
+});
+
+
+router.get("/getAllUsers",async(req,res) =>{
+  const users = await User.find({})
+  res.send(users)
 })
 
 
