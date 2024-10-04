@@ -5,5 +5,5 @@ function SubHeadingComponent({text}) {
     <div className="text-gray-500 font-sans my-1 text-center">{text}</div>
   )
 }
-
+ 
 export default SubHeadingComponent
