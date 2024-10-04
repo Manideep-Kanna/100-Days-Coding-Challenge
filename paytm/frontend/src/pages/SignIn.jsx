@@ -15,7 +15,7 @@ function SignIn() {
       <InputBoxComponent label={"Email"} placeholder={"manideep@gmail.com"} />
         <InputBoxComponent label="password" />
         <ButtonComponent text="Sign In" onClick={"#"}/>
-        <BottomWarningComponent text="Dont have an account" linkName={"Sign Up"} linkUrl={"#"} />
+        <BottomWarningComponent text="Dont have an account" linkName={"Sign Up"} linkUrl={"/signUp"} />
     </div>
   )
 }

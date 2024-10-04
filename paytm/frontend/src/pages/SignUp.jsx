@@ -74,7 +74,7 @@ function SignUp() {
       <BottomWarningComponent
         text="Already have an account"
         linkName="Sign In"
-        linkUrl={"#"}
+        linkUrl={"/signIn"}
       />
     </div>
   );
