@@ -40,7 +40,7 @@ function  UserComponent() {
       </div>
       {
         users.map((user) =>(
-          <User name={user.firstName + " " + user.lastName} onSendMoneyClicked ={() => onSendMoneyButtonClicked(user._id,user.name)}  />
+          <User name={user.firstName + " " + user.lastName} onSendMoneyClicked ={() => onSendMoneyButtonClicked(user._id,user.firstName)}  />
         ))
       }
     </div>
