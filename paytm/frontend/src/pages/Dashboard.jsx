@@ -5,9 +5,11 @@ import UserComponent from "../components/UserComponent";
 
 function Dashboard() {
   return (
-    <div>
+    <div className='mx-14 my-10'>
       <AppBar />
+      <hr />
       <BalanceComponent />
+      <hr />
       <UserComponent />
     </div>
   );

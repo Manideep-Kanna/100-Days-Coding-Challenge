@@ -92,7 +92,7 @@ router.put("/", authMiddleware,async (req, res) => {
 router.get("/bulk",authMiddleware,async(req,res) =>{
     const filter = req.query.filter;
     console.log(filter)
-
+try{
     const users = await User.find({$or:[
         {firstName: {
             $regex: filter
@@ -107,9 +107,13 @@ router.get("/bulk",authMiddleware,async(req,res) =>{
         return res.send("There are no users with such like name")
     }
 
-    res.json({
-       user: users.map( user => user)
+    res.json(users)
+  }
+  catch(err){
+    res.status(411).json({
+      "message": "Please SignIn again your token got expired"
     })
+  }
 });
 
 

@@ -13,7 +13,7 @@ function authMiddleware(req,res,next){
         next();
     }
     catch(err){
-        res.send("Some error while verifying")
+        res.json({message: "Some error while verifying the Authentication Token"})
     }
 
 }
