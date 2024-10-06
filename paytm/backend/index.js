@@ -4,7 +4,9 @@ const mainRouter = require("./routes/index")
 const JWT_SECRET = require('./config');
 const { authMiddleware } = require("./middleware");
 
+
 const app = express();
+const port = process.env.PORT || 4000;
 
 app.use(express.json())
 app.use(cors())
@@ -15,8 +17,8 @@ app.get("/",(req,res) =>{
    res.send('<h1>Dont worry brother the URL is working fine</h1>')
 })
 
-app.listen(3000, () =>{
-    console.log("The server is running on port 3000")
+app.listen(port, () =>{
+    console.log(`The server is running on port ${port}`)
 })
 
 
