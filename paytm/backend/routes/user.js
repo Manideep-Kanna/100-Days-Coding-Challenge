@@ -103,9 +103,6 @@ try{
         }}
     ]
     })
-    if(users.length == 0){
-        return res.send("There are no users with such like name")
-    }
 
     res.json(users)
   }

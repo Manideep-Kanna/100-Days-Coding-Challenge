@@ -39,7 +39,7 @@ function  UserComponent() {
         <input className="w-full" type="text" name="" id="" placeholder="Search Users" onChange={(e) => setFilter(e.target.value)}/>
       </div>
       {
-        users.map((user) =>(
+        users?.map((user) =>(
           <User name={user.firstName + " " + user.lastName} onSendMoneyClicked ={() => onSendMoneyButtonClicked(user._id,user.firstName)}  />
         ))
       }
