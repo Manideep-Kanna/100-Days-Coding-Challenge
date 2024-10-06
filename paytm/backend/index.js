@@ -11,9 +11,9 @@ app.use(cors())
 
 app.use("/api/v1", mainRouter)
 
-// app.get("/",authMiddleware,(req,res) =>{
-//     res.status(200).json({message: "Authenticated Successfully",status: true})
-// })
+app.get("/",(req,res) =>{
+   res.send('<h1>Dont worry brother the URL is working fine</h1>')
+})
 
 app.listen(3000, () =>{
     console.log("The server is running on port 3000")
